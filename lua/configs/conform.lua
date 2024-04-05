@@ -1,8 +1,8 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    go = { "gofumpt", "goimports" },
-    markdown = { "markdown-toc", "markdownlint" }
+    go = { "gofumpt", "goimports", "golines" },
+    markdown = { "markdownlint" }
     -- css = { "prettier" },
     -- html = { "prettier" },
   },
