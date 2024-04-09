@@ -2,7 +2,9 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
     go = { "gofumpt", "goimports", "golines" },
-    markdown = { "markdownlint" }
+    markdown = { "markdownlint" },
+    -- proto = { "buf" },
+    tf = { "tflint", "tfsec" }
     -- css = { "prettier" },
     -- html = { "prettier" },
   },
@@ -11,6 +13,12 @@ local options = {
     -- These options will be passed to conform.format()
     timeout_ms = 500,
     lsp_fallback = true,
+  },
+
+  formatters = {
+    golines = {
+      prepend_args = { "--max-len", "200" },
+    },
   },
 }
 

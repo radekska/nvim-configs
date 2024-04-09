@@ -212,13 +212,23 @@ return {
       })
     end
   },
+  {
+    "anuvyklack/windows.nvim",
+    dependencies = {
+      "anuvyklack/middleclass",
+      "anuvyklack/animation.nvim"
+    },
+    event = "BufRead",
 
-
-
-
-
-
-
-
-
+    config = function()
+      vim.o.winwidth = 10
+      vim.o.winminwidth = 10
+      vim.o.equalalways = false
+      require('windows').setup({
+        animation = {
+          fps = 60
+        }
+      })
+    end
+  }
 }
