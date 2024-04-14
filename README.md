@@ -1,0 +1,2 @@
+- `nvchad-2-5` - branch for nvchad config
+- `astronvim-4-1` - branch for astronvim config
