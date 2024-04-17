@@ -18,6 +18,9 @@ return {
             desc = "Select project",
           },
         },
+        t = {
+          ["<C-k>"] = false,
+        }
       },
     },
   },
