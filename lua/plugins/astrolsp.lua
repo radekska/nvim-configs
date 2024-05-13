@@ -19,6 +19,7 @@ return {
     },
     -- customize lsp formatting options
     formatting = {
+      
       -- control auto formatting on save
       format_on_save = {
         enabled = false, -- enable or disable format on save globally
@@ -34,9 +35,9 @@ return {
       --   -- "lua_ls",
       -- },
       timeout_ms = 8000, -- default format timeout
-      -- filter = function(client) -- fully override the default formatting function
-      --   return true
-      -- end
+      enabled = {
+        "marksman"
+      }
     },
     -- -- enable servers that you already have installed without mason
     -- servers = {

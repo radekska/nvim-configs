@@ -12,7 +12,7 @@ return {
             function() require("astrocore.buffer").nav(vim.v.count1) end,
             desc = "Next buffer",
           },
-          ["<Leader>te"] = { "<Cmd>ZenMode<CR>", desc = "Toggle ZenMode"},
+          ["<Leader>te"] = { "<Cmd>ZenMode<CR>", desc = "Toggle ZenMode" },
           ["<Leader>ln"] = { ":lua require('nvim-navbuddy').open()<CR>", desc = "LSP Navigation" },
           ["<Leader>fp"] = {
             ":lua require'telescope'.extensions.project.project{display_type = 'full'}<CR>",
@@ -42,6 +42,11 @@ return {
             desc = "Declaration of current symbol",
             cond = "textDocument/declaration",
           },
+          lf = {
+            function() vim.lsp.buf.format(require("astrolsp").format_opts) end,
+            desc = "Format buffer",
+            cond = "textDocument/formatting",
+          }
         },
       },
     },
