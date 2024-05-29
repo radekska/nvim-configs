@@ -9,9 +9,7 @@ return {
       "nvim-telescope/telescope.nvim", -- Optional
     },
     config = function()
-      if next(vim.lsp.get_active_clients()) ~= nil then
-        require("nvim-navbuddy").setup { window = { size = "90%" }, lsp = { auto_attach = true } }
-      end
+      require("nvim-navbuddy").setup { window = { size = "90%" }, lsp = { auto_attach = true } }
     end,
   },
 }

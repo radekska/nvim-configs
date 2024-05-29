@@ -16,4 +16,8 @@ if not pcall(require, "lazy") then
 end
 
 require "lazy_setup"
-require "polish"
+-- turn of relative lines
+vim.opt.relativenumber = false
+-- enforce global lanugage to english
+vim.opt.langmenu = "en_US.UTF-8"
+vim.cmd "language en_US.UTF-8"
