@@ -10,6 +10,7 @@ return { -- override nvim-cmp plugin
     local cmp = require("cmp")
     -- modify the sources part of the options table
     opts.sources = cmp.config.sources({
+      { name = "codeium",  priority = 1500 },
       { name = "copilot",  priority = 1200 },
       { name = "nvim_lsp", priority = 1000 },
       { name = "luasnip",  priority = 750 },
