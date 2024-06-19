@@ -21,3 +21,5 @@ vim.opt.relativenumber = false
 -- enforce global lanugage to english
 vim.opt.langmenu = "en_US.UTF-8"
 vim.cmd "language en_US.UTF-8"
+-- wrap lines
+vim.opt.wrap = true

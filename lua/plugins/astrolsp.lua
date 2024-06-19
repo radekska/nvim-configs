@@ -19,6 +19,8 @@ return {
     },
     -- customize lsp formatting options
     formatting = {
+      async = true, -- enable or disable async formatting
+
 
       -- control auto formatting on save
       format_on_save = {
@@ -41,7 +43,8 @@ return {
     },
     -- -- enable servers that you already have installed without mason
     servers = {
-      "terraformls"
+      "terraformls",
+      "gopls",
       -- "pyright"
     },
     -- -- customize language server configuration options passed to `lspconfig`
@@ -52,10 +55,10 @@ return {
     -- -- customize how language servers are attached
     handlers = {
       --   -- a function without a key is simply the default handler, functions take two parameters, the server name and the configured options table for that server
-      function(server, opts)
-        local navbuddy = require("nvim-navbuddy")
-        require("lspconfig")[server].setup({ on_attach = function(client, bufnr) navbuddy.attach(client, bufnr) end })
-      end
+      -- function(server, opts)
+      --   local navbuddy = require("nvim-navbuddy")
+      --   require("lspconfig")[server].setup({ on_attach = function(client, bufnr) navbuddy.attach(client, bufnr) end })
+      -- end
       --
       --   -- the key is the server that is being setup with `lspconfig`
       --   -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
