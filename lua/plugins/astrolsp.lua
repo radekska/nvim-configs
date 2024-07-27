@@ -45,6 +45,7 @@ return {
     servers = {
       "terraformls",
       "gopls",
+      "starpls"
       -- "pyright"
     },
     -- -- customize language server configuration options passed to `lspconfig`
