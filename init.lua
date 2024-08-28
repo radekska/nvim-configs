@@ -12,7 +12,7 @@ vim.opt.rtp:prepend(lazypath)
 if not pcall(require, "lazy") then
   -- stylua: ignore
   vim.api.nvim_echo(
-  { { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } },
+    { { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } },
     true, {})
   vim.fn.getchar()
   vim.cmd.quit()
@@ -26,6 +26,7 @@ vim.opt.langmenu = "en_US.UTF-8"
 vim.cmd "language en_US.UTF-8"
 -- wrap lines
 vim.opt.wrap = true
+vim.cmd [[colorscheme tokyonight]]
 
 vim.cmd [[
   autocmd BufRead,BufNewFile Tiltfile set filetype=starlark
@@ -34,4 +35,3 @@ vim.cmd [[
 vim.cmd [[
   autocmd BufRead,BufNewFile .tilt set filetype=starlark
 ]]
-

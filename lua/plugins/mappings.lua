@@ -18,6 +18,10 @@ return {
             ":lua require'telescope'.extensions.project.project{display_type = 'full'}<CR>",
             desc = "Select project",
           },
+          ["<Leader>k"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" },
+          ["<Leader>j"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
+          ["<Leader>h"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
+          ["<Leader>;"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
         },
         t = {
           ["<C-k>"] = false,
