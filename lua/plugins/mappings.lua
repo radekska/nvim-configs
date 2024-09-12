@@ -22,6 +22,7 @@ return {
           ["<Leader>j"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
           ["<Leader>h"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
           ["<Leader>;"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
+          ["<C-'>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" }
         },
         t = {
           ["<C-k>"] = false,
