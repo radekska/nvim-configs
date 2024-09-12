@@ -5,9 +5,9 @@ return {
     local null_ls = require("null-ls")
     local sources = {
       null_ls.builtins.formatting.golines.with {
-        extra_args = { "-m", "200" }
+        extra_args = { "-m", "80" },
       }
     }
-    null_ls.setup({ sources = sources })
+    null_ls.setup({ sources = sources, debug = true })
   end
 }
