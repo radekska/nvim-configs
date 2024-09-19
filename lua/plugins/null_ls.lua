@@ -8,6 +8,6 @@ return {
         extra_args = { "-m", "180" },
       }
     }
-    null_ls.setup({ sources = sources, debug = true })
+    null_ls.setup({ sources = sources })
   end
 }
