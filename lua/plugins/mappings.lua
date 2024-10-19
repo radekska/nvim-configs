@@ -47,11 +47,6 @@ return {
             desc = "Declaration of current symbol",
             cond = "textDocument/declaration",
           },
-          lf = {
-            function() vim.lsp.buf.format(require("astrolsp").format_opts) end,
-            desc = "Format buffer",
-            cond = "textDocument/formatting",
-          }
         },
       },
     },
