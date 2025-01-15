@@ -26,7 +26,7 @@ vim.opt.langmenu = "en_US.UTF-8"
 vim.cmd "language en_US.UTF-8"
 -- wrap lines
 vim.opt.wrap = true
-vim.cmd [[colorscheme tokyonight]]
+vim.cmd [[colorscheme catppuccin-macchiato]]
 
 vim.cmd [[
   autocmd BufRead,BufNewFile Tiltfile set filetype=starlark
@@ -35,3 +35,14 @@ vim.cmd [[
 vim.cmd [[
   autocmd BufRead,BufNewFile .tilt set filetype=starlark
 ]]
+
+-- Fix arrow key sequences in terminal mode
+vim.api.nvim_set_keymap('i', '^[[1;4D', '<Left>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<Esc>[1;4C', '<Right>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<Esc>[1;4A', '<Up>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<Esc>[1;4B', '<Down>', { noremap = true, silent = true })
+
+
+vim.env.TERM = "xterm-256color"
+-- views can only be fully collapsed with the global statusline
+vim.opt.laststatus = 3

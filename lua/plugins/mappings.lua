@@ -18,14 +18,23 @@ return {
             ":lua require'telescope'.extensions.project.project{display_type = 'full'}<CR>",
             desc = "Select project",
           },
+          ["<Leader>fg"] = {":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", desc="Live Grep Args"},
           ["<Leader>k"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" },
           ["<Leader>j"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
           ["<Leader>h"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
           ["<Leader>;"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
-          ["<C-'>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" }
+          ["<C-'>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
+          ["<Left>"] = { "<Left>" },
+          ["<Right>"] = { "<Right>" },
+          ["<Up>"] = { "<Up>" },
+          ["<Down>"] = { "<Down>" }
         },
         t = {
           ["<C-k>"] = false,
+          ["<Left>"] = { "<Left>" },
+          ["<Right>"] = { "<Right>" },
+          ["<Up>"] = { "<Up>" },
+          ["<Down>"] = { "<Down>" }
         }
       },
     },
