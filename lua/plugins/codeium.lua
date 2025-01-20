@@ -8,8 +8,13 @@ return {
     config = function()
       require("codeium").setup({
         virtual_text = {
-          enabled = true
-        }
+          enabled = true,
+          key_bindings = {
+            accept = "<C-y>",
+            next = "<C->>",
+            prev = "<C-<>",
+          }
+        },
       })
       require('codeium.virtual_text').set_statusbar_refresh(function()
         require('lualine').refresh()
