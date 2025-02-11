@@ -46,3 +46,7 @@ vim.api.nvim_set_keymap('i', '<Esc>[1;4B', '<Down>', { noremap = true, silent = 
 vim.env.TERM = "xterm-256color"
 -- views can only be fully collapsed with the global statusline
 vim.opt.laststatus = 3
+
+require("notify").setup({
+  background_colour = "#000000",
+})

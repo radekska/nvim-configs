@@ -32,6 +32,10 @@ return {
           -- Set Anthropic/Claude as the default chat adapter
           adapter = "anthropic",
         },
+        inline = {
+          -- Set Anthropic/Claude as the default inline adapter
+          adapter = "anthropic",
+        },
       },
 
       opts = {
