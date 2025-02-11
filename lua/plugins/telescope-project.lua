@@ -22,7 +22,7 @@ return {
               -- Change working directory without closing telescope
               project_actions.change_working_directory(prompt_bufnr, false)
               -- Open git files picker after project selection
-              require("telescope.builtin").git_files()
+              require("telescope.builtin").find_files { hidden = true, no_ignore = true }
             end
           }
         }
