@@ -3,6 +3,40 @@ return {
   "AstroNvim/astrolsp",
   ---@type AstroLSPOpts
   opts = {
+    autocmds = {
+      yaml_to_helm_detection = {
+        cond = function(_, bufnr)
+          local bufname = vim.api.nvim_buf_get_name(bufnr) -- Get full file path
+          local ext = bufname:match("^.+%.(.+)$")          -- Extract extension
+          if ext == "yaml" or ext == "yml" then
+            return true
+          end
+          return false
+        end,
+        {
+          event = { "BufNewFile", "BufRead", "BufWrite", "BufEnter", "FileReadPre" },
+          callback = function()
+            local bufnr = vim.api.nvim_get_current_buf()
+            local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+
+            for _, line in ipairs(lines) do
+              if line:match("{{.+}}") then
+                vim.bo[bufnr].filetype = "helm"
+                local clients = vim.lsp.get_active_clients()
+                for _, client in ipairs(clients) do
+                  if client.name == "yamlls" then -- Replace with the LSP name you want to disable
+                    vim.lsp.buf_detach_client(bufnr, client.id)
+                  end
+                end
+                return
+              end
+            end
+          end
+        }
+
+
+      }
+    },
     commands = {
       FormatBuffer = {
         function() vim.lsp.buf.format(require("astrolsp").format_opts) end,
