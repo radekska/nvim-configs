@@ -81,7 +81,8 @@ return {
       "marksman",
       -- "pyright"
       "djlsp",
-      "cssls"
+      "cssls",
+      "bufls"
     },
     -- -- customize language server configuration options passed to `lspconfig`
     -- ---@diagnostic disable: missing-fields
