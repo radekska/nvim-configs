@@ -26,7 +26,7 @@ vim.opt.langmenu = "en_US.UTF-8"
 vim.cmd "language en_US.UTF-8"
 -- wrap lines
 vim.opt.wrap = true
-vim.cmd [[colorscheme catppuccin-macchiato]]
+vim.cmd [[colorscheme astrotheme]]
 
 vim.cmd [[
   autocmd BufRead,BufNewFile Tiltfile set filetype=starlark
@@ -44,6 +44,8 @@ vim.api.nvim_set_keymap('i', '<Esc>[1;4B', '<Down>', { noremap = true, silent = 
 
 
 vim.env.TERM = "xterm-256color"
+vim.env.DEBUG_CODEIUM = "fatal"
+
 -- views can only be fully collapsed with the global statusline
 vim.opt.laststatus = 3
 
