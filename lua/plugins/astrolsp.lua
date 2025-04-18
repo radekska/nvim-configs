@@ -35,14 +35,6 @@ return {
 				},
 			},
 		},
-		commands = {
-			FormatBuffer = {
-				function()
-					vim.lsp.buf.format(require("astrolsp").format_opts)
-				end,
-				desc = "Format file with LSP",
-			},
-		},
 		-- Configuration table of features provided by AstroLSP
 		features = {
 			autoformat = false, -- enable or disable auto formatting on start
@@ -84,15 +76,5 @@ return {
 			"sqlls",
 		},
 		handlers = {},
-		mappings = {
-			n = {
-				["<Leader>lff"] = {
-					function()
-						vim.lsp.buf.format(require("astrolsp").format_opts)
-					end,
-					desc = "Format buffer",
-				},
-			},
-		},
 	},
 }
