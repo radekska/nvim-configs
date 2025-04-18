@@ -81,6 +81,7 @@ return {
 			"djlsp",
 			"cssls",
 			"protols",
+			"sqlls",
 		},
 		handlers = {},
 		mappings = {

@@ -20,7 +20,7 @@ return {
             env = {
               -- Get API key from environment variable
               -- Make sure to set: export ANTHROPIC_API_KEY="your-key-here"
-              api_key = os.getenv("ANTHROPIC_API_KEY"),
+              -- api_key = os.getenv("ANTHROPIC_API_KEY"),
             },
           })
         end,
