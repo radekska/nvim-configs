@@ -35,6 +35,18 @@ return {
 				},
 			},
 		},
+		commands = {
+			Format = {
+				function()
+					vim.lsp.buf.format()
+				end,
+				-- condition to create the user command
+				-- can either be a string of a client capability or a function of `fun(client, bufnr): boolean`
+				cond = "textDocument/formatting",
+				-- the rest of the user command options (:h nvim_create_user_command)
+				desc = "Format file with LSP",
+			},
+		},
 		-- Configuration table of features provided by AstroLSP
 		features = {
 			autoformat = false, -- enable or disable auto formatting on start
@@ -75,6 +87,5 @@ return {
 			"protols",
 			"sqlls",
 		},
-		handlers = {},
 	},
 }
